@@ -26,7 +26,7 @@ export default function GenericErrorPage(props) {
     let title = "An error occurred";
 
     // Once the Page Builder is installed, this can be safely removed.
-    if (props.error.code === "PB_NOT_INSTALLED") {
+    if (props.error && props.error.code === "PB_NOT_INSTALLED") {
         [title, message] = getPbNotInstalledErrorMessage();
     }
 
